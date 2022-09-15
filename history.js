@@ -28,10 +28,10 @@ function displayHistory() {
   previousTests.forEach((test) => {
     const newRow = document.createElement("div");
     newRow.classList.add("card");
-    let limitqQuestionText=test.questionText.slice(0,40);
+    let limitqQuestionText=test.questionText;
 
     newRow.innerHTML = `
-  <h3>${limitqQuestionText}...</h3>
+  <h3>${limitqQuestionText}</h3>
   <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
   `;
