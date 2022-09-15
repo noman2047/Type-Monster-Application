@@ -145,21 +145,28 @@ button {
   grid-template-columns: repeat(3,1fr);
   column-gap: 10px;
 }
-  .card {
-    width: 100%;
-    padding: 50px;
-    padding: 20px 30px;
-    color: white;
-    border-radius: 15px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      92.49deg,
-      rgba(255, 255, 255, 0.1) 0.18%,
-      rgba(255, 255, 255, 0.05) 99.85%
-    );
-    backdrop-filter: blur(5px);
-    margin-bottom: 30px;
+@media only screen and (max-width: 700px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 15px;
   }
+}
+.card {
+  width: 100%;
+  padding: 50px;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    92.49deg,
+    rgba(255, 255, 255, 0.1) 0.18%,
+    rgba(255, 255, 255, 0.05) 99.85%
+  );
+  backdrop-filter: blur(5px);
+  margin-bottom: 30px;
+}
 
 
 .card p{
@@ -180,12 +187,3 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
-  .box-container {
-    padding: 0 20px;
-    width: 100%;
-  }
-  .card {
-    flex-direction: column;
-  }
-}
